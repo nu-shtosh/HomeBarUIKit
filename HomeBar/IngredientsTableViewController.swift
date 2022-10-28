@@ -10,8 +10,8 @@ import UIKit
 class IngredientsTableViewController: UITableViewController {
 
     // MARK: - Properties
-    var ingredients: [Ingredient]!
-    var cocktails: [Cocktail]!
+    var ingredients: [Ingredient] = []
+    var cocktails: [Cocktail] = []
 
     // MARK: - View Did Load
     override func viewDidLoad() {
@@ -86,6 +86,4 @@ extension IngredientsTableViewController {
         tabBarItem.image = UIImage(named: "redLime32")
         tabBarItem.title = "Ингредиенты"
     }
-
-
 }

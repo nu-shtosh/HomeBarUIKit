@@ -10,25 +10,28 @@
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="HomeBar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="HomeBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="Pte-7W-2XW">
-                                <rect key="frame" x="94.666666666666686" y="325.66666666666669" width="201" height="193.00000000000006"/>
+                                <rect key="frame" x="16" y="351" width="358" height="193"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата рождения:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvO-Fh-EBa">
-                                        <rect key="frame" x="33" y="0.0" width="134.66666666666666" height="22.666666666666668"/>
+                                        <rect key="frame" x="111.66666666666667" y="0.0" width="134.66666666666663" height="22.666666666666668"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="shadowColor" red="0.68627452850000004" green="0.24313727020000001" blue="0.31372550129999999" alpha="0.39954987580000001" colorSpace="custom" customColorSpace="displayP3"/>
                                     </label>
-                                    <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="paY-Ok-vLZ">
-                                        <rect key="frame" x="31.333333333333329" y="65.666666666666629" width="138" height="50"/>
+                                    <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paY-Ok-vLZ">
+                                        <rect key="frame" x="109.66666666666667" y="65.666666666666686" width="138.66666666666663" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.85882353779999998" green="0.30196079609999998" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="-5548867.5908329487">
+                                            <!--2000-10-28 18:38:52 +0000-->
+                                        </date>
                                         <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
                                             <!--1970-01-01 11:00:00 +0000-->
                                         </date>
@@ -38,7 +41,7 @@
                                         <locale key="locale" localeIdentifier="ru"/>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZ3-Ig-dHJ">
-                                        <rect key="frame" x="63.999999999999979" y="158.66666666666663" width="72.666666666666686" height="34.333333333333343"/>
+                                        <rect key="frame" x="142.66666666666666" y="158.66666666666669" width="72.666666666666657" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Войти">
                                             <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,21 +49,18 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="confirmAge" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xtz-IZ-qsb"/>
-                                            <segue destination="1Av-EK-F83" kind="presentation" modalPresentationStyle="fullScreen" id="TPP-56-Idi"/>
+                                            <segue destination="1Av-EK-F83" kind="presentation" identifier="showTabBar" modalPresentationStyle="fullScreen" id="TPP-56-Idi"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="201" id="b8V-wG-J0g"/>
-                                    <constraint firstAttribute="height" constant="193" id="nGd-jW-JGH"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Pte-7W-2XW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NgZ-J2-PIm"/>
-                            <constraint firstItem="Pte-7W-2XW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fXw-xZ-Bd2"/>
+                            <constraint firstItem="Pte-7W-2XW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="304" id="8tl-zl-6zW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pte-7W-2XW" secondAttribute="trailing" constant="16" id="cEs-Vn-BTD"/>
+                            <constraint firstItem="Pte-7W-2XW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eQu-Zd-X3c"/>
                         </constraints>
                     </view>
                     <connections>

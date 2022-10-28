@@ -24,7 +24,7 @@ class WelcomeViewController: UIViewController {
             to: Date.now
         ).year
         if numberOfYears ?? 0 >= 18 {
-            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+            performSegue(withIdentifier: "showTabBar", sender: nil)
         } else {
             showAlert(
                 title: "Отказано в доступе!",
