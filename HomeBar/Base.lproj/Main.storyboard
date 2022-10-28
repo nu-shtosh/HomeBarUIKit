@@ -46,7 +46,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="confirmAge" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xtz-IZ-qsb"/>
-                                            <segue destination="1Av-EK-F83" kind="show" id="TPP-56-Idi"/>
+                                            <segue destination="1Av-EK-F83" kind="presentation" modalPresentationStyle="fullScreen" id="TPP-56-Idi"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="48" y="-2"/>
         </scene>
-        <!--TabBarViewController-->
+        <!--TabBar-->
         <scene sceneID="x5C-VT-Kr5">
             <objects>
-                <viewControllerPlaceholder storyboardName="TabBarStoryboard" referencedIdentifier="TabBarViewController" id="1Av-EK-F83" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TabBarStoryboard" referencedIdentifier="TabBarViewController" id="1Av-EK-F83" userLabel="TabBar" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dmc-5j-TRR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9d-fV-pnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
