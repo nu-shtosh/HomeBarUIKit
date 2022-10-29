@@ -16,6 +16,7 @@ class IngredientsTableViewController: UITableViewController {
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
+        print()
         view.backgroundColor = .black
     }
 
@@ -31,6 +32,7 @@ class IngredientsTableViewController: UITableViewController {
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
             ingredients[indexPath.row].checkmarkState = false
@@ -63,8 +65,7 @@ class IngredientsTableViewController: UITableViewController {
             blue: 0.373,
             alpha: 1
         )
-        var ingredient = ingredients[indexPath.row]
-        ingredient.checkmarkState = false
+        let ingredient = ingredients[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.textProperties.color = .white
         content.text = ingredient.name
@@ -73,9 +74,31 @@ class IngredientsTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let possibleCocktails = findPossibleCocktails()
         guard let possibleCocktailsTVC = segue.destination as? PossibleCocktailsTableViewController else { return }
-        possibleCocktailsTVC.cocktails = cocktails
-        possibleCocktailsTVC.ingredients = ingredients
+        possibleCocktailsTVC.possibleCocktails = possibleCocktails
     }
 
+}
+
+extension IngredientsTableViewController {
+    private func findPossibleCocktails() -> [Cocktail] {
+
+        var possibleCocktails: [Cocktail] = []
+        var selectedIngredients: [String] = []
+
+        ingredients.forEach {
+            if $0.checkmarkState == true {
+                selectedIngredients.append($0.name)
+            }
+        }
+
+        cocktails.forEach { cocktail in
+            let ingredientsInCocktail = cocktail.ingredients
+            if Set(selectedIngredients).contains(Set(ingredientsInCocktail)) {
+                possibleCocktails.append(cocktail)
+            }
+        }
+        return possibleCocktails
+    }
 }

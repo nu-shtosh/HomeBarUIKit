@@ -9,13 +9,11 @@ import UIKit
 
 class PossibleCocktailsTableViewController: UITableViewController {
 
-    var ingredients: [Ingredient]!
-    var cocktails: [Cocktail]!
-
-    var possibleCocktail: [Cocktail] = []
+    var possibleCocktails: [Cocktail] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(possibleCocktails)
         view.backgroundColor = .black
         navigationBarSettings()
     }
@@ -25,7 +23,7 @@ class PossibleCocktailsTableViewController: UITableViewController {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        cocktails.count
+        possibleCocktails.count
     }
 
     override func tableView(
@@ -51,7 +49,7 @@ class PossibleCocktailsTableViewController: UITableViewController {
             blue: 0.373,
             alpha: 1
         )
-        let cocktail = cocktails[indexPath.row]
+        let cocktail = possibleCocktails[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.textProperties.color = .white
         content.text = cocktail.name
@@ -61,12 +59,8 @@ class PossibleCocktailsTableViewController: UITableViewController {
 }
 
 extension PossibleCocktailsTableViewController {
-    private func navigationBarSettings() {
+    private func navigationBarSettings(){
         title = "Коктейли"
+        navigationItem.backBarButtonItem?.tintColor = .red
     }
-
-    func addToPossibleCocktails() {
-
-    }
-
 }
