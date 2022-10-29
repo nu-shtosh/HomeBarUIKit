@@ -21,17 +21,11 @@ class IngredientsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    override func tableView(
-        _ tableView: UITableView,
-        numberOfRowsInSection section: Int
-    ) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         ingredients.count
     }
 
-    override func tableView(
-        _ tableView: UITableView,
-        didSelectRowAt indexPath: IndexPath
-    ) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark {
             tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
@@ -42,10 +36,7 @@ class IngredientsTableViewController: UITableViewController {
         }
     }
 
-    override func tableView(
-        _ tableView: UITableView,
-        cellForRowAt indexPath: IndexPath
-    ) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "ingredient",
             for: indexPath
@@ -69,6 +60,9 @@ class IngredientsTableViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         content.textProperties.color = .white
         content.text = ingredient.name
+        if ingredients[indexPath.row].checkmarkState {
+            cell.accessoryType = .checkmark
+        }
         cell.contentConfiguration = content
         return cell
     }
@@ -92,13 +86,15 @@ extension IngredientsTableViewController {
                 selectedIngredients.append($0.name)
             }
         }
-
+print(selectedIngredients)
         cocktails.forEach { cocktail in
             let ingredientsInCocktail = cocktail.ingredients
-            if Set(selectedIngredients).contains(Set(ingredientsInCocktail)) {
+            if selectedIngredients.contains(ingredientsInCocktail) {
                 possibleCocktails.append(cocktail)
             }
+            print(ingredientsInCocktail)
         }
+        
         return possibleCocktails
     }
 }
