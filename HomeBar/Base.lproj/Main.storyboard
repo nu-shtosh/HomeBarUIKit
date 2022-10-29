@@ -74,10 +74,10 @@
         <!--TabBar-->
         <scene sceneID="x5C-VT-Kr5">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9d-fV-pnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="TabBarStoryboard" referencedIdentifier="TabBarViewController" id="1Av-EK-F83" userLabel="TabBar" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dmc-5j-TRR"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b9d-fV-pnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="759" y="-2"/>
         </scene>

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FCA3164290DB8E400AA7698 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA3163290DB8E300AA7698 /* Drinks.swift */; };
+		1FCA3166290DB94E00AA7698 /* AlcoholTestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCA3165290DB94E00AA7698 /* AlcoholTestStoryboard.storyboard */; };
+		1FCA3168290DB98800AA7698 /* ResultTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA3167290DB98800AA7698 /* ResultTestViewController.swift */; };
+		1FCA316A290DB9BE00AA7698 /* AlcoholTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCA3169290DB9BE00AA7698 /* AlcoholTestViewController.swift */; };
 		B893BE1F290D2A2000B0AE5B /* IngredientsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B893BE1E290D2A2000B0AE5B /* IngredientsNavigationController.swift */; };
 		B8A9B59C290C2F0C005D02D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A9B59B290C2F0C005D02D7 /* AppDelegate.swift */; };
 		B8A9B59E290C2F0C005D02D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A9B59D290C2F0C005D02D7 /* SceneDelegate.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FCA3163290DB8E300AA7698 /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
+		1FCA3165290DB94E00AA7698 /* AlcoholTestStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlcoholTestStoryboard.storyboard; sourceTree = "<group>"; };
+		1FCA3167290DB98800AA7698 /* ResultTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTestViewController.swift; sourceTree = "<group>"; };
+		1FCA3169290DB9BE00AA7698 /* AlcoholTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholTestViewController.swift; sourceTree = "<group>"; };
 		B893BE1E290D2A2000B0AE5B /* IngredientsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsNavigationController.swift; sourceTree = "<group>"; };
 		B8A9B598290C2F0C005D02D7 /* HomeBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A9B59B290C2F0C005D02D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +88,7 @@
 				B8A9B5A9290C2F0D005D02D7 /* Info.plist */,
 				B8A9B5AF290C30B0005D02D7 /* DataStore.swift */,
 				B8A9B5B1290C30EE005D02D7 /* Cocktail.swift */,
+				1FCA3163290DB8E300AA7698 /* Drinks.swift */,
 				B8A9B5A6290C2F0D005D02D7 /* LaunchScreen.storyboard */,
 				B8A9B5A1290C2F0C005D02D7 /* Main.storyboard */,
 				B8A9B59F290C2F0C005D02D7 /* WelcomeViewController.swift */,
@@ -90,6 +99,9 @@
 				B8A9B5BB290C3361005D02D7 /* IngredientsTableViewController.swift */,
 				B8A9B5BD290C346B005D02D7 /* PossibleCocktailsStoryboard.storyboard */,
 				B8A9B5BF290C34EE005D02D7 /* PossibleCocktailsTableViewController.swift */,
+				1FCA3165290DB94E00AA7698 /* AlcoholTestStoryboard.storyboard */,
+				1FCA3167290DB98800AA7698 /* ResultTestViewController.swift */,
+				1FCA3169290DB9BE00AA7698 /* AlcoholTestViewController.swift */,
 			);
 			path = HomeBar;
 			sourceTree = "<group>";
@@ -156,6 +168,7 @@
 				B8A9B5A5290C2F0D005D02D7 /* Assets.xcassets in Resources */,
 				B8A9B5A3290C2F0C005D02D7 /* Main.storyboard in Resources */,
 				B8A9B5BA290C32C9005D02D7 /* IngredientsStoryboard.storyboard in Resources */,
+				1FCA3166290DB94E00AA7698 /* AlcoholTestStoryboard.storyboard in Resources */,
 				B8A9B5BE290C346B005D02D7 /* PossibleCocktailsStoryboard.storyboard in Resources */,
 				B8A9B5B8290C31D8005D02D7 /* TabBarStoryboard.storyboard in Resources */,
 			);
@@ -174,9 +187,12 @@
 				B8A9B59C290C2F0C005D02D7 /* AppDelegate.swift in Sources */,
 				B8A9B5B2290C30EE005D02D7 /* Cocktail.swift in Sources */,
 				B8A9B5B4290C3143005D02D7 /* TabBarViewController.swift in Sources */,
+				1FCA3164290DB8E400AA7698 /* Drinks.swift in Sources */,
+				1FCA316A290DB9BE00AA7698 /* AlcoholTestViewController.swift in Sources */,
 				B893BE1F290D2A2000B0AE5B /* IngredientsNavigationController.swift in Sources */,
 				B8A9B59E290C2F0C005D02D7 /* SceneDelegate.swift in Sources */,
 				B8A9B5C0290C34EE005D02D7 /* PossibleCocktailsTableViewController.swift in Sources */,
+				1FCA3168290DB98800AA7698 /* ResultTestViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S3FDYF8UUF;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeBar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -351,7 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S3FDYF8UUF;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeBar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
