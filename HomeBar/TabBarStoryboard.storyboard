@@ -10,8 +10,10 @@
         <!--Ingredients-->
         <scene sceneID="KPH-lE-gBf">
             <objects>
-                <viewControllerPlaceholder storyboardName="IngredientsStoryboard" referencedIdentifier="IngredientsTableViewController" id="IIV-sZ-AW2" userLabel="Ingredients" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ингредиенты" id="wCv-YA-e4u"/>
+                <viewControllerPlaceholder storyboardName="IngredientsStoryboard" referencedIdentifier="NavBar" id="IIV-sZ-AW2" userLabel="Ingredients" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ингредиенты" image="box.truck" catalog="system" id="wCv-YA-e4u">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7v-xA-HsZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -22,14 +24,16 @@
             <objects>
                 <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="Scd-pG-3g7" customClass="TabBarViewController" customModule="HomeBar" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="7Gn-v0-N39">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="7Gn-v0-N39">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemRedColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="IIV-sZ-AW2" kind="relationship" relationship="viewControllers" id="OfC-wr-Ou4"/>
+                        <segue destination="IIV-sZ-AW2" kind="relationship" relationship="viewControllers" id="5BQ-HZ-lk6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vY2-gG-Mqy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -38,6 +42,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="box.truck" catalog="system" width="128" height="90"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

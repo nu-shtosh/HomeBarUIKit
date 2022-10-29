@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ingredients Table View Controller-->
+        <!--Ингредиенты-->
         <scene sceneID="baN-NG-5DP">
             <objects>
                 <tableViewController storyboardIdentifier="IngredientsTableViewController" id="xHs-e7-EnT" customClass="IngredientsTableViewController" customModule="HomeBar" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                             <outlet property="delegate" destination="xHs-e7-EnT" id="vCX-f6-zEy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Gwk-uy-Eap">
+                    <navigationItem key="navigationItem" title="Ингредиенты" largeTitleDisplayMode="always" id="Gwk-uy-Eap">
                         <barButtonItem key="rightBarButtonItem" title="Коктейли" id="dcM-za-5h7">
                             <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
@@ -58,13 +58,13 @@
             </objects>
             <point key="canvasLocation" x="4432.3076923076924" y="3.5545023696682461"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Ingredients Navigation Controller-->
         <scene sceneID="ln5-bA-Ide">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="FTk-N1-PMu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavBar" automaticallyAdjustsScrollViewInsets="NO" id="FTk-N1-PMu" customClass="IngredientsNavigationController" customModule="HomeBar" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="8cz-BD-m4p">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" largeTitles="YES" id="8cz-BD-m4p">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="largeTitleTextAttributes">
@@ -72,12 +72,8 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W8N-96-UXJ">
-                        <rect key="frame" x="0.0" y="761" width="390" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
-                        <segue destination="xHs-e7-EnT" kind="relationship" relationship="rootViewController" id="1BE-AS-xml"/>
+                        <segue destination="xHs-e7-EnT" kind="relationship" relationship="rootViewController" destinationCreationSelector="toIngredients" id="1BE-AS-xml"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyl-Ax-xnk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

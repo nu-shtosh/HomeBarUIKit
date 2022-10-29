@@ -17,7 +17,6 @@ class IngredientsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        tabBarSettings()
     }
 
     // MARK: - Table view data source
@@ -79,11 +78,4 @@ class IngredientsTableViewController: UITableViewController {
         possibleCocktailsTVC.ingredients = ingredients
     }
 
-}
-
-extension IngredientsTableViewController {
-    private func tabBarSettings() {
-        tabBarItem.image = UIImage(named: "redLime32")
-        tabBarItem.title = "Ингредиенты"
-    }
 }

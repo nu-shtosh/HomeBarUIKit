@@ -15,8 +15,6 @@ class TabBarViewController: UITabBarController {
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.backgroundColor = .black
-        tabBar.tintColor = .red
         transferDataToControllers(
             ingredients: ingredients,
             cocktails: cocktails
@@ -29,9 +27,9 @@ class TabBarViewController: UITabBarController {
         cocktails: [Cocktail]
     ) {
         viewControllers?.forEach { viewController in
-            if let ingredientsVC = viewController as? IngredientsTableViewController {
-                ingredientsVC.ingredients = ingredients
-                ingredientsVC.cocktails = cocktails
+            if let ingredientsNVC = viewController as? IngredientsNavigationController {
+                ingredientsNVC.ingredients = ingredients
+                ingredientsNVC.cocktails = cocktails
             }
         }
     }
