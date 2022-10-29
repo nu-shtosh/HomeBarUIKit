@@ -89,8 +89,9 @@ extension IngredientsTableViewController {
 print(selectedIngredients)
         cocktails.forEach { cocktail in
             let ingredientsInCocktail = cocktail.ingredients
-            if selectedIngredients.contains(ingredientsInCocktail) {
+            if Set(selectedIngredients).isDisjoint(with: Set(ingredientsInCocktail)) {
                 possibleCocktails.append(cocktail)
+                print("yes")
             }
             print(ingredientsInCocktail)
         }
