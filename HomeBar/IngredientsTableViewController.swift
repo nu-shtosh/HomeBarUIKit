@@ -16,7 +16,6 @@ class IngredientsTableViewController: UITableViewController {
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        print()
         view.backgroundColor = .black
     }
 
@@ -67,6 +66,7 @@ class IngredientsTableViewController: UITableViewController {
         return cell
     }
 
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let possibleCocktails = findPossibleCocktails()
         guard let possibleCocktailsTVC = segue.destination as? PossibleCocktailsTableViewController else { return }
@@ -75,6 +75,7 @@ class IngredientsTableViewController: UITableViewController {
 
 }
 
+// MARK: - Private methods
 extension IngredientsTableViewController {
     private func findPossibleCocktails() -> [Cocktail] {
 
@@ -86,14 +87,11 @@ extension IngredientsTableViewController {
                 selectedIngredients.append($0.name)
             }
         }
-print(selectedIngredients)
         cocktails.forEach { cocktail in
             let ingredientsInCocktail = cocktail.ingredients
-            if Set(selectedIngredients).isDisjoint(with: Set(ingredientsInCocktail)) {
+            if !Set(selectedIngredients).isDisjoint(with: Set(ingredientsInCocktail)) {
                 possibleCocktails.append(cocktail)
-                print("yes")
             }
-            print(ingredientsInCocktail)
         }
         
         return possibleCocktails

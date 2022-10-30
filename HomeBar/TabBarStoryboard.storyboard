@@ -11,36 +11,31 @@
         <scene sceneID="KPH-lE-gBf">
             <objects>
                 <viewControllerPlaceholder storyboardName="IngredientsStoryboard" referencedIdentifier="NavBar" id="IIV-sZ-AW2" userLabel="Ingredients" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ингредиенты" image="box.truck" catalog="system" id="wCv-YA-e4u">
-                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Ингредиенты" id="wCv-YA-e4u"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7v-xA-HsZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="-28"/>
+            <point key="canvasLocation" x="1648" y="-319"/>
         </scene>
         <!--Alco-->
         <scene sceneID="tF3-Rt-2th">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="Alco" storyboardName="AlcoholTestStoryboard" referencedIdentifier="Alco" id="aIM-3b-Yfy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3Pg-H1-gD5"/>
+                    <tabBarItem key="tabBarItem" title="Тест на алкоголь" id="3Pg-H1-gD5"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8M2-Na-nBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="41"/>
+            <point key="canvasLocation" x="1615" y="-233"/>
         </scene>
-        <!--Developer-->
+        <!--Developers-->
         <scene sceneID="E1J-SE-t7B">
             <objects>
-                <viewControllerPlaceholder storyboardName="Developer" referencedIdentifier="Developer" id="dvD-F3-UWZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Разработчики" image="person.fill" catalog="system" id="94i-3I-pB0">
-                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" id="GYW-59-ox8"/>
+                <viewControllerPlaceholder storyboardName="DeveloperStoryboard" referencedIdentifier="DeveloperStoryboard" id="dvD-F3-UWZ" userLabel="Developers" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Разработчики" id="94i-3I-pB0"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hk6-dV-GDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="122"/>
+            <point key="canvasLocation" x="1642" y="-155"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="sEW-dJ-3On">
@@ -50,9 +45,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="7Gn-v0-N39">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
-                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="systemRedColor"/>
                     </tabBar>
                     <connections>
@@ -67,8 +60,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="box.truck" catalog="system" width="128" height="90"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

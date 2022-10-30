@@ -38,7 +38,8 @@ class AlcoholTestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        view.backgroundColor = .black
         drinkStackView.isHidden = true
         isHiddenButton(true, .black)
         
@@ -225,7 +226,6 @@ extension AlcoholTestViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         alcoholValue = Double(ingredients[row].alcohol)
-        print(alcoholValue)
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {

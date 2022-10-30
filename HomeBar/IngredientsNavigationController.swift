@@ -14,7 +14,6 @@ class IngredientsNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarSettings()
         transferDataToControllers(ingredients: ingredients, cocktails: cocktails)
     }
 
@@ -26,10 +25,5 @@ class IngredientsNavigationController: UINavigationController {
             ingredientsTVC.ingredients = ingredients
             ingredientsTVC.cocktails = cocktails
         }
-    }
-    private func tabBarSettings() {
-        tabBarItem.image = UIImage(named: "redLime32")
-        tabBarItem.title = "Ингредиенты"
-        tabBarItem.badgeColor = .clear
     }
 }

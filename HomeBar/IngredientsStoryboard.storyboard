@@ -59,11 +59,13 @@
             </objects>
             <point key="canvasLocation" x="4432.3076923076924" y="3.5545023696682461"/>
         </scene>
-        <!--Ingredients Navigation Controller-->
+        <!--Ингредиенты-->
         <scene sceneID="ln5-bA-Ide">
             <objects>
                 <navigationController storyboardIdentifier="NavBar" automaticallyAdjustsScrollViewInsets="NO" id="FTk-N1-PMu" customClass="IngredientsNavigationController" customModule="HomeBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ингредиенты" image="shippingbox.fill" catalog="system" id="K0W-sP-oTU"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" largeTitles="YES" id="8cz-BD-m4p">
                         <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -84,6 +86,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="shippingbox.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

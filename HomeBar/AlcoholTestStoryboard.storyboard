@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EgG-n4-s0H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -275,11 +275,11 @@
             </objects>
             <point key="canvasLocation" x="4166" y="706"/>
         </scene>
-        <!--Item-->
+        <!--Тест на алкоголь-->
         <scene sceneID="csF-Rg-whZ">
             <objects>
                 <navigationController storyboardIdentifier="Alco" automaticallyAdjustsScrollViewInsets="NO" id="EgG-n4-s0H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fS6-Ok-VkI"/>
+                    <tabBarItem key="tabBarItem" title="Тест на алкоголь" image="testtube.2" catalog="system" id="fS6-Ok-VkI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" largeTitles="YES" id="GCe-Fh-cig">
                         <rect key="frame" x="0.0" y="47" width="390" height="96"/>
@@ -302,5 +302,6 @@
     <resources>
         <image name="icons8-вино-20" width="20" height="20"/>
         <image name="icons8-вино2-30" width="30" height="30"/>
+        <image name="testtube.2" catalog="system" width="128" height="119"/>
     </resources>
 </document>
