@@ -33,10 +33,7 @@ class WelcomeViewController: UIViewController {
         }
     }
 
-    private func showAlert(
-        title: String, message: String,
-        textField: UITextField? = nil
-    ) {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(
             title: title,
             message: message,

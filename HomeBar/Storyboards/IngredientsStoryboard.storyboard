@@ -28,7 +28,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" red="0.99903076889999998" green="0.21457254889999999" blue="0.3743772507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -38,7 +38,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Ингредиенты" largeTitleDisplayMode="always" id="Gwk-uy-Eap">
                         <barButtonItem key="rightBarButtonItem" title="Коктейли" id="dcM-za-5h7">
-                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <color key="tintColor" red="0.99903076889999998" green="0.21457254889999999" blue="0.3743772507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="Alz-ht-jM3" kind="show" id="hYL-Xm-rDy"/>
                             </connections>
@@ -70,7 +70,7 @@
                         <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <color key="tintColor" red="0.99903076889999998" green="0.21457254889999999" blue="0.3743772507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
