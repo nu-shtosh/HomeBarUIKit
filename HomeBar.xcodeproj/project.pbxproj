@@ -40,6 +40,7 @@
 		1FCA3169290DB9BE00AA7698 /* AlcoholTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholTestViewController.swift; sourceTree = "<group>"; };
 		B893BE1E290D2A2000B0AE5B /* IngredientsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsNavigationController.swift; sourceTree = "<group>"; };
 		B893BE20290E799C00B0AE5B /* CocktailDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailViewController.swift; sourceTree = "<group>"; };
+		B8A6EFAA290F030800C525E6 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		B8A9B598290C2F0C005D02D7 /* HomeBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A9B59B290C2F0C005D02D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8A9B59D290C2F0C005D02D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 				1FD51513290EEA5A00E00290 /* App */,
 				B8A9B5A4290C2F0D005D02D7 /* Assets.xcassets */,
 				B8E4C567290F0156006EEC97 /* .gitignore.md */,
+				B8A6EFAA290F030800C525E6 /* LICENSE.md */,
 			);
 			path = HomeBar;
 			sourceTree = "<group>";
