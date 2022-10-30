@@ -9,29 +9,43 @@ import UIKit
 
 class IngredientsTableViewController: UITableViewController {
 
-    // MARK: - Properties
     var ingredients: [Ingredient] = []
     var cocktails: [Cocktail] = []
+    var selectedIngredients: [String] = []
 
-    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        navigationItem.rightBarButtonItem?.isHidden = true
     }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         ingredients.count
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+        
+        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
+            tableView.cellForRow(at: indexPath)?.accessoryType = .none
             ingredients[indexPath.row].checkmarkState = false
+            
+            if let index = selectedIngredients.firstIndex(
+                of: ingredients[indexPath.row].name
+            ) {
+                selectedIngredients.remove(at: index)
+            }
+            
+            if selectedIngredients.isEmpty {
+                navigationItem.rightBarButtonItem?.isHidden = true
+            }
+            
         } else {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
             ingredients[indexPath.row].checkmarkState = true
+            selectedIngredients.append(ingredients[indexPath.row].name)
+            navigationItem.rightBarButtonItem?.isHidden = false
         }
     }
 
@@ -72,7 +86,7 @@ class IngredientsTableViewController: UITableViewController {
         guard let possibleCocktailsTVC = segue.destination as? PossibleCocktailsTableViewController else { return }
         possibleCocktailsTVC.possibleCocktails = possibleCocktails
     }
-
+    
 }
 
 // MARK: - Private methods
@@ -80,33 +94,13 @@ extension IngredientsTableViewController {
     private func findPossibleCocktails() -> [Cocktail] {
 
         var possibleCocktails: [Cocktail] = []
-        var selectedIngredients: [String] = []
 
-        ingredients.forEach {
-            if $0.checkmarkState == true {
-                selectedIngredients.append($0.name)
-            }
-        }
         cocktails.forEach { cocktail in
             let ingredientsInCocktail = cocktail.ingredients
             if !Set(selectedIngredients).isDisjoint(with: Set(ingredientsInCocktail)) {
                 possibleCocktails.append(cocktail)
             }
         }
-        
         return possibleCocktails
-    }
-}
-
-extension IngredientsTableViewController {
-    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
     }
 }
