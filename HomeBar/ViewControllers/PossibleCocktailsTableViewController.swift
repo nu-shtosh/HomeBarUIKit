@@ -13,6 +13,7 @@ class PossibleCocktailsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .black
         navigationBarSettings()
     }
