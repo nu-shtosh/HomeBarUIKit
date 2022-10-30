@@ -1,11 +1,17 @@
 ### App: 
 Home Bar
 
-### Description:
+### Описание:
 #### Проект Домашний Бар
 - выбери ингредиенты и посмотри какие коктейли с ними могут получится
 - заполни параметры и посмотри сколько у тебя промиллей
 
+### В проекте участвовали:
+- https://github.com/nu-shtosh
+- https://github.com/Alexandr-Mayyura
+- https://github.com/ArmenJhan
+- https://github.com/dudkaDev
+- https://github.com/DenisBalandin-proxy
 
 ### Stack:
 <a href="">![SWIFT](https://img.shields.io/badge/-SWIFT-orange)</a>
