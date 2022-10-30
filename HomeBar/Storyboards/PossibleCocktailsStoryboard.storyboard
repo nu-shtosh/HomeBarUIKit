@@ -18,6 +18,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <color key="separatorColor" systemColor="systemRedColor"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="possibleCocktail" id="ui0-Pv-xAH">
                                 <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
@@ -66,7 +67,7 @@
                                                     <color key="baseForegroundColor" red="0.99903076889999998" green="0.21457254889999999" blue="0.3743772507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="closeButtonPressed:" destination="wED-xE-Qk6" eventType="touchUpInside" id="vO7-cl-K7s"/>
+                                                    <action selector="closeButtonPressed" destination="wED-xE-Qk6" eventType="touchUpInside" id="t4i-J8-eeI"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="hDj-05-QBw">

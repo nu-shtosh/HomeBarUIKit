@@ -17,10 +17,7 @@ class IngredientsNavigationController: UINavigationController {
         transferDataToControllers(ingredients: ingredients, cocktails: cocktails)
     }
 
-    private func transferDataToControllers(
-        ingredients: [Ingredient],
-        cocktails: [Cocktail]
-    ) {
+    private func transferDataToControllers(ingredients: [Ingredient], cocktails: [Cocktail]) {
         if let ingredientsTVC = topViewController as? IngredientsTableViewController {
             ingredientsTVC.ingredients = ingredients
             ingredientsTVC.cocktails = cocktails

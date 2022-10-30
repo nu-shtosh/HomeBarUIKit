@@ -31,7 +31,7 @@ class CocktailDetailViewController: UIViewController {
         cocktailImage.image = UIImage(named: cocktail.image)
     }
     
-    @IBAction func closeButtonPressed(_ sender: UIButton) {
+    @IBAction func closeButtonPressed() {
         dismiss(animated: true)
     }
 }

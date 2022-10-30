@@ -86,10 +86,9 @@ class IngredientsTableViewController: UITableViewController {
         guard let possibleCocktailsTVC = segue.destination as? PossibleCocktailsTableViewController else { return }
         possibleCocktailsTVC.possibleCocktails = possibleCocktails
     }
-    
 }
 
-// MARK: - Private methods
+    // MARK: - Private methods
 extension IngredientsTableViewController {
     private func findPossibleCocktails() -> [Cocktail] {
 

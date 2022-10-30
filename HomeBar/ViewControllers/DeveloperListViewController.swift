@@ -21,15 +21,20 @@ class DeveloperListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         developerList.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "developer", for: indexPath)
-        var content = cell.defaultContentConfiguration()
         let developer = developerList[indexPath.row]
-        let background = UIView()
         
-        background.backgroundColor = UIColor(red: 1, green: 0.216, blue: 0.373, alpha: 0.35)
+        let background = UIView()
+        background.backgroundColor = UIColor(
+            red: 1,
+            green: 0.216,
+            blue: 0.373,
+            alpha: 0.35
+        )
+        
+        var content = cell.defaultContentConfiguration()
         content.text = developer.fullname
         content.textProperties.color = UIColor.white
         content.image = UIImage(named: developer.photo)
@@ -41,7 +46,6 @@ class DeveloperListViewController: UITableViewController {
         return cell
     }
     
-
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailsVC = segue.destination as? DeveloperDetailsViewController else { return }

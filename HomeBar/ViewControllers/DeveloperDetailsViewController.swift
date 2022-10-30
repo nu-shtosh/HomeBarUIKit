@@ -12,6 +12,7 @@ class DeveloperDetailsViewController: UIViewController {
     @IBOutlet var infoTextView: UITextView!
     
     @IBOutlet var developImageView: UIImageView!
+    
     var devInfo: Developer!
     
     override func viewDidLoad() {

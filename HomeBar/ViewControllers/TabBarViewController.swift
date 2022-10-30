@@ -22,10 +22,7 @@ class TabBarViewController: UITabBarController {
     }
 
     // MARK: - Navigation
-    private func transferDataToControllers(
-        ingredients: [Ingredient],
-        cocktails: [Cocktail]
-    ) {
+    private func transferDataToControllers(ingredients: [Ingredient], cocktails: [Cocktail]) {
         viewControllers?.forEach { viewController in
             if let ingredientsNVC = viewController as? IngredientsNavigationController {
                 ingredientsNVC.ingredients = ingredients
