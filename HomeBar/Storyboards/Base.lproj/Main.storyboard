@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="HomeBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Pte-7W-2XW">
+                                <rect key="frame" x="16" y="378.66666666666669" width="398" height="177.00000000000006"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата рождения:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvO-Fh-EBa">
+                                        <rect key="frame" x="131.66666666666669" y="0.0" width="134.66666666666669" height="22.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" red="0.68627452850000004" green="0.24313727020000001" blue="0.31372550129999999" alpha="0.39954987580000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </label>
+                                    <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paY-Ok-vLZ">
+                                        <rect key="frame" x="129.66666666666666" y="57.666666666666629" width="138.99999999999997" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.85882353779999998" green="0.30196079609999998" blue="0.39215683940000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="-5548867.5908329487">
+                                            <!--2000-10-28 18:38:52 +0000-->
+                                        </date>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                            <!--1970-01-01 11:00:00 +0000-->
+                                        </date>
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                            <!--2037-12-31 11:00:00 +0000-->
+                                        </date>
+                                        <locale key="locale" localeIdentifier="ru"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZ3-Ig-dHJ">
+                                        <rect key="frame" x="162.66666666666666" y="142.66666666666669" width="72.666666666666657" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Войти">
+                                            <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.85723779450000004" green="0.30048228020000001" blue="0.39227253400000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="confirmAge" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xtz-IZ-qsb"/>
+                                            <segue destination="1Av-EK-F83" kind="presentation" identifier="showTabBar" modalPresentationStyle="fullScreen" id="TPP-56-Idi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeBar logo" translatesAutoresizingMaskIntoConstraints="NO" id="FRR-Hc-ILo">
+                                <rect key="frame" x="75.333333333333343" y="79" width="279.33333333333326" height="279.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FRR-Hc-ILo" secondAttribute="height" id="HQY-3C-Aeg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coctails logo" translatesAutoresizingMaskIntoConstraints="NO" id="tOC-eV-WjN">
+                                <rect key="frame" x="16" y="555.66666666666663" width="398" height="279.66666666666663"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FRR-Hc-ILo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5OD-1L-Acs"/>
+                            <constraint firstItem="tOC-eV-WjN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9W5-B4-7KC"/>
+                            <constraint firstItem="FRR-Hc-ILo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="DsU-lm-wxA"/>
+                            <constraint firstItem="FRR-Hc-ILo" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="FUA-Cw-QBI"/>
+                            <constraint firstItem="tOC-eV-WjN" firstAttribute="top" secondItem="Pte-7W-2XW" secondAttribute="bottom" id="I8w-HM-3tb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pte-7W-2XW" secondAttribute="trailing" constant="16" id="cEs-Vn-BTD"/>
+                            <constraint firstItem="Pte-7W-2XW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eQu-Zd-X3c"/>
+                            <constraint firstItem="Pte-7W-2XW" firstAttribute="top" secondItem="FRR-Hc-ILo" secondAttribute="bottom" constant="20" id="oe6-WW-MWb"/>
+                            <constraint firstItem="tOC-eV-WjN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="vxh-Jr-YwT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tOC-eV-WjN" secondAttribute="trailing" constant="16" id="wmV-6c-HG8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="agePicker" destination="paY-Ok-vLZ" id="g3J-Mb-okC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-2"/>
+        </scene>
+        <!--TabBar-->
+        <scene sceneID="x5C-VT-Kr5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBarStoryboard" referencedIdentifier="TabBarViewController" id="1Av-EK-F83" userLabel="TabBar" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dmc-5j-TRR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9d-fV-pnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HomeBar logo" width="1620" height="1596"/>
+        <image name="coctails logo" width="1148" height="500"/>
+    </resources>
+</document>
