@@ -93,6 +93,9 @@ class AlcoholTestViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped() {
+        guard let text = weightTextfield.text else { return }
+        guard let currentValue = Double(text) else { return }
+        weightValue = currentValue
         for stackView in [userStackView, drinkStackView] {
             stackView?.isHidden.toggle()
         }
@@ -169,7 +172,7 @@ extension AlcoholTestViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else { return }
         if textField == weightTextfield {
-            guard let currentValue = Float(text), (0...300).contains(currentValue) else {
+            guard let currentValue = Double(text), (0...300).contains(currentValue) else {
                 showAlert(
                     title: "Ошибка",
                     message: "Введите число от 0 до 300",
@@ -177,7 +180,6 @@ extension AlcoholTestViewController: UITextFieldDelegate {
                 )
                 return
             }
-            weightValue = Double(currentValue)
         } else {
             guard let volumeValue = Float(text), (0...3000).contains(volumeValue) else {
                 showAlert(
