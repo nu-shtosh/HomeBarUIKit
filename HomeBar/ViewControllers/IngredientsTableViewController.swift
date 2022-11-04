@@ -8,9 +8,10 @@
 import UIKit
 
 class IngredientsTableViewController: UITableViewController {
+    
+    private var ingredients = Ingredient.getIngredients()
+    private let cocktails = Cocktail.getCocktails()
 
-    var ingredients: [Ingredient] = []
-    var cocktails: [Cocktail] = []
     var selectedIngredients: [String] = []
 
     override func viewDidLoad() {
